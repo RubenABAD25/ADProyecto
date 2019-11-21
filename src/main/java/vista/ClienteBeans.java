@@ -15,7 +15,7 @@ public class ClienteBeans {
 	private GestionLocal gl;
 	
 	/* Beans properties */
-	private Cliente aux;
+	
 	private String cedula;
 	private List<Cliente> clientes;
 	
@@ -23,18 +23,11 @@ public class ClienteBeans {
 	@PostConstruct
 	public void init() 
 	{
-		this.aux=new Cliente();
+		
 	}
 	
 
-	public Cliente getAux() {
-		return aux;
-	}
-
-
-	public void setAux(Cliente aux) {
-		this.aux = aux;
-	}
+	
 
 
 	public List<Cliente> getClientes() {
