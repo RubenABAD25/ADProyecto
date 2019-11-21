@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+<h:form>
+<label>Cedula:</label>
+<h:inputText value="#{clienteBeans.cedula}" />
+<h:commandButton action="#{clienteBeans.buscar()}" value="Buscar" />
+<h:dataTable value="#{clienteBeans.clientes}" var="cliente">
+	<h:column>
+		<f:facet name="header">id</f:facet>
+		#{cliente.codigo}
+	</h:column>
+	<h:column>
+		<f:facet name="header">nombres</f:facet>
+		#{cliente.nombre}
+	</h:column>
+	
+	<h:column>
+		<f:facet name="header">apellido</f:facet>
+		#{cliente.apellido}
+	</h:column>
+	<h:column>
+		<f:facet name="header">fechaN</f:facet>
+		#{cliente.fechaN}
+	</h:column>
+</h:dataTable>
+</h:form>
+</body> 
+</html>
