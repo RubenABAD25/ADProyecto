@@ -27,9 +27,6 @@ public class ClienteBeans {
 	}
 	
 
-	//154545454
-
-
 	public List<Cliente> getClientes() {
 		return clientes;
 	}
@@ -55,4 +52,5 @@ public class ClienteBeans {
 		this.clientes=gl.getCliente(this.cedula);
 		return null;
 	}
+	
 }
